@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dv4pbm8oha5k0"]
+[gd_scene load_steps=6 format=3 uid="uid://dv4pbm8oha5k0"]
 
 [ext_resource type="Texture2D" uid="uid://c4knajg4254re" path="res://assette/gfx/Overworld.png" id="1_x56d5"]
 [ext_resource type="PackedScene" uid="uid://befgr0joia1u6" path="res://player.tscn" id="2_nrynr"]
-[ext_resource type="Texture2D" uid="uid://c34diebhi6dyq" path="res://assette/gfx/character.png" id="3_prj2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_he32l"]
 texture = ExtResource("1_x56d5")
@@ -1083,41 +1082,8 @@ texture = ExtResource("1_x56d5")
 [sub_resource type="TileSet" id="TileSet_2sphy"]
 sources/0 = SubResource("TileSetAtlasSource_he32l")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1x6ak"]
-atlas = ExtResource("3_prj2j")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1x12s"]
-atlas = ExtResource("3_prj2j")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e87gs"]
-atlas = ExtResource("3_prj2j")
-region = Rect2(32, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tms1n"]
-atlas = ExtResource("3_prj2j")
-region = Rect2(48, 0, 16, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_g3r5k"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1x6ak")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1x12s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e87gs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tms1n")
-}],
-"loop": true,
-"name": &"walk_down",
-"speed": 5.0
-}]
+animations = []
 
 [node name="Node2D" type="Node2D"]
 
@@ -1134,4 +1100,4 @@ zoom = Vector2(3, 3)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_g3r5k")
-animation = &"walk_down"
+animation = &""
