@@ -1115,7 +1115,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_tms1n")
 }],
 "loop": true,
-"name": &"teste",
+"name": &"walk_down",
 "speed": 5.0
 }]
 
@@ -1134,4 +1134,4 @@ zoom = Vector2(3, 3)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_g3r5k")
-animation = &"teste"
+animation = &"walk_down"
