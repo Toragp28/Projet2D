@@ -10,7 +10,7 @@ var attack_hitbox: Area2D
 func _ready() -> void:
 	animated_sprite = $AnimatedSprite2D
 	attack_hitbox = $AttackHitbox  
-	attack_hitbox.set_deferred("monitoring", false)  
+	  
 
 	attack_timer = Timer.new() 
 	attack_timer.wait_time = 0.5  
