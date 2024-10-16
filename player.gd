@@ -15,8 +15,8 @@ var input_direction = Vector2(0, 0)
 
 
 func get_input():
-	input_direction = Input.get_vector("m_left", "m_right", "m_up", "m_down")
-	velocity = input_direction * speed
+	input_direction = Input.get_vector("left", "right", "up", "down")
+	velocity = input_direction * -speed
 	
 func _physics_process(delta):
 	get_input()
