@@ -16,7 +16,7 @@ var input_direction = Vector2(0, 0)
 
 func get_input():
 	input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * -speed
+	velocity = input_direction * speed
 	
 	if input_direction == Vector2(1, 0):
 		$AnimatedSprite2D.play("move_right")
@@ -25,10 +25,10 @@ func get_input():
 		$AnimatedSprite2D.play("move_left")
 		
 	elif input_direction == Vector2(0, 1):
-		$AnimatedSprite2D.play("move_right")
+		$AnimatedSprite2D.play("move_down")
 		
 	elif input_direction == Vector2(0, -1):
-		$AnimatedSprite2D.play("move_left")
+		$AnimatedSprite2D.play("move_up")
 
 		
 	
