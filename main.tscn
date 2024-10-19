@@ -1145,7 +1145,7 @@ safe_margin = 0.001
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_g3r5k")
 animation = &""
 
