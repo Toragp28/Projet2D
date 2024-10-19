@@ -22,7 +22,8 @@ var dir = Vector2.ZERO
 
 
 ################################### FONCTION ##################################################
-
+func tree_cut():
+	pass
 func _ready() -> void:
 	$AnimatedSprite2D.play("idle_down")
 

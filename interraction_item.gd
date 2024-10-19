@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.has_node("box"):
+	if area.has_node("box2"):
 		player_entered = true
 
 
@@ -40,3 +40,8 @@ func _on_broke_timeout() -> void:
 
 func _on_grow_cooldown_timeout() -> void:
 	growing = false
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.has_node("box2"):
+		player_entered = false

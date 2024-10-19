@@ -70,7 +70,7 @@ animations = [{
 
 [node name="AnimatedSprite2D" parent="." index="4"]
 sprite_frames = SubResource("SpriteFrames_rtj1o")
-animation = &"stade 3"
 
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="timeout" from="broke" to="AnimatedSprite2D" method="_on_broke_timeout"]
 [connection signal="timeout" from="grow_cooldown" to="AnimatedSprite2D" method="_on_grow_cooldown_timeout"]

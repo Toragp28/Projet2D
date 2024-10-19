@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://befgr0joia1u6"]
+[gd_scene load_steps=31 format=3 uid="uid://befgr0joia1u6"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1pw7a"]
 [ext_resource type="Texture2D" uid="uid://c34diebhi6dyq" path="res://assette/gfx/character.png" id="3_e8i1a"]
@@ -243,6 +243,10 @@ radius = 6.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_0cuys"]
 radius = 40.0125
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00aqr"]
+radius = 6.0
+height = 18.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_1pw7a")
 
@@ -259,6 +263,11 @@ shape = SubResource("CircleShape2D_3aswk")
 [node name="box" type="CollisionShape2D" parent="item_hitbox"]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_0cuys")
+
+[node name="detecting_hitbox" type="Area2D" parent="."]
+
+[node name="box2" type="CollisionShape2D" parent="detecting_hitbox"]
+shape = SubResource("CapsuleShape2D_00aqr")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="item_hitbox" to="." method="_on_item_hitbox_area_entered"]
