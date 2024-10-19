@@ -5,17 +5,20 @@ var broke = true
 var growing = false
 var is_farming_now = false
 var woodscene = preload("res://wood.tscn")
+var cooldown_pickup = load("res://wood.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
 func _wood_spawn():
+	
 	var wood_instance = woodscene.instantiate()
 	var home = get_node(".")
 	home.add_child(wood_instance)
 	wood_instance.position = Vector2(0, 0)
-
+	var cooldown_timer = wood_instance.get_node("Cooldown_pickup")
+	cooldown_timer.start()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if player_entered == true and Input.is_action_pressed("sword_attack") and is_farming_now == false:

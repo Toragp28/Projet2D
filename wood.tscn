@@ -22,3 +22,9 @@ animations = [{
 
 [node name="wood" type="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_m7alw")
+
+[node name="Cooldown_pickup" type="Timer" parent="." index="2"]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Cooldown_pickup" to="." method="_on_cooldown_pickup_timeout"]
