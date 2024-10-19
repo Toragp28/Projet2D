@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0clswwfqaepe"]
+
+[ext_resource type="PackedScene" uid="uid://dxyxs8jtkkqg6" path="res://interraction_item.tscn" id="1_udv5k"]
+
+[node name="interraction_item" instance=ExtResource("1_udv5k")]
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 3)
+
+[node name="broke" parent="." index="1"]
+wait_time = 2.0
+one_shot = true
+
+[node name="grow_cooldown" type="Timer" parent="." index="2"]
+wait_time = 5.0
+one_shot = true
+
+[node name="AnimatedSprite2D" parent="." index="4"]
+animation = &"stade 3"
+
+[connection signal="timeout" from="broke" to="." method="_on_broke_timeout"]
+[connection signal="timeout" from="grow_cooldown" to="." method="_on_grow_cooldown_timeout"]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://befgr0joia1u6" path="res://player.tscn" id="2_yi7ka"]
 [ext_resource type="PackedScene" uid="uid://jo4xrn5p88gg" path="res://piece.tscn" id="3_2rglr"]
 [ext_resource type="PackedScene" uid="uid://nw27buqidj6q" path="res://wood.tscn" id="4_lo3pv"]
-[ext_resource type="PackedScene" uid="uid://c0clswwfqaepe" path="res://tree.tscn" id="5_46hsy"]
+[ext_resource type="PackedScene" uid="uid://bppfuainamshc" path="res://tree.tscn" id="5_46hsy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_he32l"]
 texture = ExtResource("1_fc1e5")
@@ -1220,5 +1220,14 @@ position = Vector2(-104, -37)
 [node name="Wood" parent="." instance=ExtResource("4_lo3pv")]
 position = Vector2(-83, 30)
 
-[node name="interraction_item" parent="." instance=ExtResource("5_46hsy")]
-position = Vector2(-60, -50)
+[node name="tree3" parent="." instance=ExtResource("5_46hsy")]
+position = Vector2(168, 70)
+
+[node name="tree4" parent="." instance=ExtResource("5_46hsy")]
+position = Vector2(63, 111)
+
+[node name="tree2" parent="." instance=ExtResource("5_46hsy")]
+position = Vector2(30, 38)
+
+[node name="tree" parent="." instance=ExtResource("5_46hsy")]
+position = Vector2(-41, -26)

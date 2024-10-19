@@ -1,9 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxyxs8jtkkqg6"]
+[gd_scene load_steps=6 format=3 uid="uid://dxyxs8jtkkqg6"]
 
 [ext_resource type="Script" path="res://interraction_item.gd" id="1_1w8f2"]
+[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="2_omhyh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j0up2"]
-radius = 22.0
+radius = 35.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7pyx2"]
+radius = 16.0312
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fride"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"stade 1",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"stade 2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"stade 3",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"stade 4",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"stade 5",
+"speed": 5.0
+}]
 
 [node name="interraction_item" type="Node2D"]
 script = ExtResource("1_1w8f2")
@@ -14,6 +46,16 @@ script = ExtResource("1_1w8f2")
 shape = SubResource("CircleShape2D_j0up2")
 
 [node name="broke" type="Timer" parent="."]
+
+[node name="collision box" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision box"]
+shape = SubResource("CircleShape2D_7pyx2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fride")
+animation = &"stade 5"
+script = ExtResource("2_omhyh")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="broke" to="." method="_on_timer_timeout"]

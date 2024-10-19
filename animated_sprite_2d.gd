@@ -8,10 +8,20 @@ func _ready() -> void:
 	
 
 func _physics_process(delta: float) -> void:
-	print(stade)
-	$".".play("stade" + str(stade))
+
+	$".".play("stade " + str(stade))
+
+	
 
 
 func _on_broke_timeout() -> void:
 	stade -= 1
 	
+
+	
+
+
+
+func _on_grow_cooldown_timeout() -> void:
+	print("cool")
+	stade += 1
