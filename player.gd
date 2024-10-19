@@ -12,7 +12,7 @@ enum STATE {
 var state = STATE.Idle
 
 #Variable Paramètre
-@export var speed = 400
+@export var speed = 100
 
 #Variable Onready
 
