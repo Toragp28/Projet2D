@@ -1,11 +1,17 @@
 extends AnimatedSprite2D
 
+@onready var script_ = get_node(".")
+var stade = 5
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$".".play("stade 5")
+	
+
+func _physics_process(delta: float) -> void:
+	print(stade)
+	$".".play("stade" + str(stade))
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	$".".play("on_ground")
+func _on_broke_timeout() -> void:
+	stade -= 1
+	

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://l6iyicx6xy6o"]
+
+[ext_resource type="PackedScene" uid="uid://j2vf1p3vbtu" path="res://collectable.tscn" id="1_n7cn6"]
+[ext_resource type="Texture2D" uid="uid://se8wy6mx5wtr" path="res://assette/gfx/objects.png" id="2_vu3yt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwq0q"]
+atlas = ExtResource("2_vu3yt")
+region = Rect2(256, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m7alw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwq0q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Wood" instance=ExtResource("1_n7cn6")]
+
+[node name="wood" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_m7alw")

@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv4pbm8oha5k0"]
+[gd_scene load_steps=9 format=3 uid="uid://dv4pbm8oha5k0"]
 
 [ext_resource type="Texture2D" uid="uid://c4knajg4254re" path="res://assette/gfx/Overworld.png" id="1_fc1e5"]
 [ext_resource type="PackedScene" uid="uid://befgr0joia1u6" path="res://player.tscn" id="2_yi7ka"]
-[ext_resource type="PackedScene" uid="uid://jo4xrn5p88gg" path="res://piece.tscn" id="3_2rglr"]
+[ext_resource type="PackedScene" uid="uid://c7h4y7osb1tnc" path="res://piece.tscn" id="3_2rglr"]
+[ext_resource type="PackedScene" uid="uid://l6iyicx6xy6o" path="res://wood.tscn" id="4_lo3pv"]
+[ext_resource type="PackedScene" uid="uid://b7ttladuyqyid" path="res://tree.tscn" id="5_46hsy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_he32l"]
 texture = ExtResource("1_fc1e5")
@@ -1150,9 +1152,15 @@ safe_margin = 0.001
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_g3r5k")
 animation = &""
 
-[node name="Collectable" parent="." instance=ExtResource("3_2rglr")]
-position = Vector2(-59, -36)
+[node name="gold" parent="." instance=ExtResource("3_2rglr")]
+position = Vector2(-104, -37)
+
+[node name="Wood" parent="." instance=ExtResource("4_lo3pv")]
+position = Vector2(-83, 30)
+
+[node name="interraction_item" parent="." instance=ExtResource("5_46hsy")]
+position = Vector2(-60, -50)
