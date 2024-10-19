@@ -1,12 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://c0clswwfqaepe"]
+[gd_scene load_steps=10 format=3 uid="uid://b7ttladuyqyid"]
 
-[ext_resource type="PackedScene" path="res://interraction_item.tscn" id="1_udv5k"]
+[ext_resource type="PackedScene" uid="uid://dxyxs8jtkkqg6" path="res://interraction_item.tscn" id="1_udv5k"]
 [ext_resource type="Texture2D" uid="uid://se8wy6mx5wtr" path="res://assette/gfx/objects.png" id="2_lfo8t"]
 [ext_resource type="Script" path="res://animated_sprite_2d.gd" id="3_c67h6"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dwyw5"]
-atlas = ExtResource("2_lfo8t")
-region = Rect2(0, 192, 33, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vwcu"]
 atlas = ExtResource("2_lfo8t")
@@ -16,29 +12,13 @@ region = Rect2(0, 160, 33, 32)
 atlas = ExtResource("2_lfo8t")
 region = Rect2(32, 192, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_csark"]
-atlas = ExtResource("2_lfo8t")
-region = Rect2(132, 192, 33, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1wbx"]
 atlas = ExtResource("2_lfo8t")
 region = Rect2(128, 192, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_femsj"]
-atlas = ExtResource("2_lfo8t")
-region = Rect2(165, 192, 33, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yk4tb"]
-atlas = ExtResource("2_lfo8t")
-region = Rect2(224, 96, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_y207k"]
 atlas = ExtResource("2_lfo8t")
 region = Rect2(160, 192, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_35a1f"]
-atlas = ExtResource("2_lfo8t")
-region = Rect2(259, 192, 37, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vw4g"]
 atlas = ExtResource("2_lfo8t")
@@ -47,9 +27,6 @@ region = Rect2(256, 192, 32, 32)
 [sub_resource type="SpriteFrames" id="SpriteFrames_cx5yq"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dwyw5")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7vwcu")
 }],
@@ -67,9 +44,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_csark")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_s1wbx")
 }],
 "loop": true,
@@ -78,12 +52,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_femsj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yk4tb")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_y207k")
 }],
 "loop": true,
@@ -91,9 +59,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_35a1f")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3vw4g")
 }],
@@ -106,11 +71,18 @@ animations = [{
 
 [node name="broke" parent="." index="1"]
 wait_time = 2.0
+one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
 sprite_frames = SubResource("SpriteFrames_cx5yq")
 animation = &"stade 5"
+frame_progress = 0.881612
 script = ExtResource("3_c67h6")
+
+[node name="cooldown reload" type="Timer" parent="." index="3"]
+wait_time = 5.0
+one_shot = true
 
 [connection signal="timeout" from="broke" to="." method="_on_broke_timeout"]
 [connection signal="timeout" from="broke" to="AnimatedSprite2D" method="_on_broke_timeout"]
+[connection signal="timeout" from="cooldown reload" to="." method="_on_cooldown_reload_timeout"]

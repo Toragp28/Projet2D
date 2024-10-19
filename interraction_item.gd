@@ -2,7 +2,7 @@ extends Node2D
 
 var player_entered = false
 var broke = true
-var stade = 5
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,8 +11,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if player_entered == true and Input.is_action_pressed("sword_attack"):
+	
+	if player_entered == true and Input.is_action_just_pressed("sword_attack"):
 		$broke.start()
+	if $AnimatedSprite2D.get('stade') != 5:
+		$"cooldown reload".start()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -22,3 +25,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _on_broke_timeout() -> void:
 	$broke.paused
+
+
+func _on_cooldown_reload_timeout() -> void:
+	var current_stade = $AnimatedSprite2D.get("stade")
+	$AnimatedSprite2D.set("stade", current_stade + 1)
