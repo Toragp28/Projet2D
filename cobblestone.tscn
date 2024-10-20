@@ -1,18 +1,18 @@
 [gd_scene load_steps=6 format=3 uid="uid://chnu0rbm3rsq7"]
 
 [ext_resource type="PackedScene" uid="uid://j2vf1p3vbtu" path="res://collectable.tscn" id="1_kouhd"]
-[ext_resource type="Texture2D" uid="uid://se8wy6mx5wtr" path="res://assette/gfx/objects.png" id="2_mn42q"]
+[ext_resource type="Texture2D" uid="uid://fiyvrlyyxlge" path="res://assette/item/Item_61.png" id="2_2lp14"]
 [ext_resource type="Script" path="res://cobble.gd" id="3_23mer"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ird7y"]
-atlas = ExtResource("2_mn42q")
-region = Rect2(257, 16, 15, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_egb20"]
+atlas = ExtResource("2_2lp14")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7o7t7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ird7y")
+"texture": SubResource("AtlasTexture_egb20")
 }],
 "loop": true,
 "name": &"default",
@@ -22,5 +22,10 @@ animations = [{
 [node name="cobblestone" instance=ExtResource("1_kouhd")]
 
 [node name="cobble" type="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0.5, 0)
+scale = Vector2(0.8125, 0.75)
 sprite_frames = SubResource("SpriteFrames_7o7t7")
 script = ExtResource("3_23mer")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 1)
