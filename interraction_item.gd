@@ -7,6 +7,7 @@ var is_farming_now = false
 var woodscene = preload("res://wood.tscn")
 var cooldown_pickup = load("res://wood.tscn")
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -19,12 +20,14 @@ func _wood_spawn():
 	wood_instance.position = Vector2(0, 0)
 	var cooldown_timer = wood_instance.get_node("Cooldown_pickup")
 	cooldown_timer.start()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if player_entered == true and Input.is_action_pressed("sword_attack") and is_farming_now == false:
+	if player_entered == true and Input.is_action_pressed("sword_attack") and is_farming_now == false and $AnimatedSprite2D.stade >=2:
+		print("marche")
 		$broke.start()
 		is_farming_now = true
-	if $AnimatedSprite2D.get("stade") != 5 and growing == false:
+	if $AnimatedSprite2D.get("stade") != $AnimatedSprite2D.max_stade and growing == false:
 		growing = true
 		$grow_cooldown.start()
 		
@@ -36,10 +39,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func _on_broke_timeout() -> void:
-	is_farming_now = false
+
 	$broke.paused
 	_wood_spawn()
-
+	is_farming_now = false
 
 func _on_grow_cooldown_timeout() -> void:
 	growing = false

@@ -16,7 +16,7 @@ wait_time = 5.0
 one_shot = true
 
 [node name="AnimatedSprite2D" parent="." index="4"]
-animation = &"stade 3"
+animation = &"stade 1"
 
 [connection signal="timeout" from="broke" to="." method="_on_broke_timeout"]
 [connection signal="timeout" from="grow_cooldown" to="." method="_on_grow_cooldown_timeout"]

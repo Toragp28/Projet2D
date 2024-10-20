@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://0k7bq2801jdj"]
+
+[ext_resource type="PackedScene" uid="uid://c0clswwfqaepe" path="res://ressource_farmable.tscn" id="1_ruc10"]
+[ext_resource type="Script" path="res://stone.gd" id="2_5alyb"]
+[ext_resource type="Texture2D" uid="uid://se8wy6mx5wtr" path="res://assette/gfx/objects.png" id="2_u18qo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auru1"]
+atlas = ExtResource("2_u18qo")
+region = Rect2(385, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1n0p"]
+atlas = ExtResource("2_u18qo")
+region = Rect2(352, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lt60v"]
+atlas = ExtResource("2_u18qo")
+region = Rect2(319, 0, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2rbdv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auru1")
+}],
+"loop": true,
+"name": &"stade 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1n0p")
+}],
+"loop": true,
+"name": &"stade 2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lt60v")
+}],
+"loop": true,
+"name": &"stade 3",
+"speed": 5.0
+}]
+
+[node name="stone" instance=ExtResource("1_ruc10")]
+
+[node name="Area2D" parent="." index="0"]
+script = ExtResource("2_5alyb")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="collision box" index="0"]
+position = Vector2(0, 1)
+
+[node name="AnimatedSprite2D" parent="." index="4"]
+sprite_frames = SubResource("SpriteFrames_2rbdv")
+animation = &"stade 2"
+
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="timeout" from="broke" to="AnimatedSprite2D" method="_on_broke_timeout"]
+[connection signal="timeout" from="grow_cooldown" to="AnimatedSprite2D" method="_on_grow_cooldown_timeout"]

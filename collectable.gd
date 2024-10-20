@@ -5,6 +5,7 @@ var player_on_box = false
 var target_position: Vector2
 var pickable = true
 
+
 func _ready() -> void:
 	pass
 
@@ -16,12 +17,16 @@ func _process(delta: float) -> void:
 		var movement: Vector2 = direction * speed * delta
 
 		if current_position.distance_to(target_position) > movement.length():
-			print("caca")
+
 			global_position += movement
 		else:
 			if pickable == true:
 				global_position = target_position
+				var player_scene = get_tree().get_root().get_node("Level")
+				var player_scene2 = player_scene.get_node("Player") 
+				player_scene2.ressource += 1  # Accès à la propriété 'ressource'
 				queue_free()
+
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

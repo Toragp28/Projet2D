@@ -20,12 +20,16 @@ var state = STATE.Idle
 var input_direction = Vector2(0, 0)
 var dir = Vector2.ZERO
 
+var ressource = 0
+
+
 
 ################################### FONCTION ##################################################
 func tree_cut():
 	pass
 func _ready() -> void:
 	$AnimatedSprite2D.play("idle_down")
+
 
 func get_input():
 	input_direction = Input.get_vector("left", "right", "up", "down")
@@ -67,11 +71,13 @@ func animatation():
 	
 	
 func _physics_process(delta):
+
+	$CanvasLayer/ressource.clear()
+	$CanvasLayer/ressource.add_text(str(ressource))
 	
 	get_input()
 	animatation()
 	move_and_slide()
-	
 	
 
 
