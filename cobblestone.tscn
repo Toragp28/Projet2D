@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://chnu0rbm3rsq7"]
+
+[ext_resource type="PackedScene" uid="uid://j2vf1p3vbtu" path="res://collectable.tscn" id="1_kouhd"]
+[ext_resource type="Texture2D" uid="uid://se8wy6mx5wtr" path="res://assette/gfx/objects.png" id="2_mn42q"]
+[ext_resource type="Script" path="res://cobble.gd" id="3_23mer"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ird7y"]
+atlas = ExtResource("2_mn42q")
+region = Rect2(257, 16, 15, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7o7t7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ird7y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="cobblestone" instance=ExtResource("1_kouhd")]
+
+[node name="cobble" type="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_7o7t7")
+script = ExtResource("3_23mer")

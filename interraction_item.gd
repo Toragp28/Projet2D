@@ -4,22 +4,35 @@ var player_entered = false
 var broke = true
 var growing = false
 var is_farming_now = false
-var woodscene = preload("res://wood.tscn")
-var cooldown_pickup = load("res://wood.tscn")
-
+var wood_scene = preload("res://wood.tscn")
+var cooldown_pickup_wood = load("res://wood.tscn")
+var cobblestone_scene = preload("res://cobblestone.tscn")
+var cooldown_pickup_cobble = load("res://cobblestone.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
-func _wood_spawn():
-	
-	var wood_instance = woodscene.instantiate()
-	var home = get_node(".")
-	home.add_child(wood_instance)
-	wood_instance.position = Vector2(0, 0)
-	var cooldown_timer = wood_instance.get_node("Cooldown_pickup")
-	cooldown_timer.start()
+func _item_spawn(item_name):
+	if item_name == "wood":
+		print("test")
+		var wood_instance = wood_scene.instantiate()
+
+
+		var home = get_node(".")
+		home.add_child(wood_instance)
+		wood_instance.position = Vector2(0, 0)
+		var cooldown_timer = wood_instance.get_node("Cooldown_pickup")
+		cooldown_timer.start()
+	elif item_name == "cobble":
+
+		var cobble_instance = cobblestone_scene.instantiate()
+		var home = get_node(".")
+		home.add_child(cobble_instance)
+		cobble_instance.position = Vector2(0, 0)
+		var cooldown_timer = cobble_instance.get_node("Cooldown_pickup")
+
+
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -41,7 +54,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _on_broke_timeout() -> void:
 
 	$broke.paused
-	_wood_spawn()
+	if $".".has_node("tree"):
+		_item_spawn("wood")
+	elif $".".has_node("stone"):
+		_item_spawn("cobble")
 	is_farming_now = false
 
 func _on_grow_cooldown_timeout() -> void:
