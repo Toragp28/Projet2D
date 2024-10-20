@@ -356,7 +356,7 @@ script = ExtResource("1_1pw7a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e1p2v")
-animation = &"move_down"
+animation = &"move_left"
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
