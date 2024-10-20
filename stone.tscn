@@ -58,6 +58,8 @@ position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_2rbdv")
 animation = &"stade 3"
 
+[node name="stone" type="Node" parent="." index="5"]
+
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="timeout" from="broke" to="AnimatedSprite2D" method="_on_broke_timeout"]
 [connection signal="timeout" from="grow_cooldown" to="AnimatedSprite2D" method="_on_grow_cooldown_timeout"]
