@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://nw27buqidj6q"]
 
 [ext_resource type="PackedScene" uid="uid://j2vf1p3vbtu" path="res://collectable.tscn" id="1_n7cn6"]
-[ext_resource type="Texture2D" uid="uid://se8wy6mx5wtr" path="res://assette/gfx/objects.png" id="2_vu3yt"]
+[ext_resource type="Texture2D" uid="uid://c7jxhw1bdtfij" path="res://assette/item/Item_54.png" id="2_s5d1g"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lwq0q"]
-atlas = ExtResource("2_vu3yt")
-region = Rect2(256, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4fgx"]
+atlas = ExtResource("2_s5d1g")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m7alw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lwq0q")
+"texture": SubResource("AtlasTexture_h4fgx")
 }],
 "loop": true,
 "name": &"default",
@@ -21,6 +21,7 @@ animations = [{
 [node name="Wood" instance=ExtResource("1_n7cn6")]
 
 [node name="wood" type="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(0.765, 0.765)
 sprite_frames = SubResource("SpriteFrames_m7alw")
 
 [node name="Cooldown_pickup" type="Timer" parent="." index="2"]
