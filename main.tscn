@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dv4pbm8oha5k0"]
+[gd_scene load_steps=11 format=3 uid="uid://dv4pbm8oha5k0"]
 
 [ext_resource type="Texture2D" uid="uid://c4knajg4254re" path="res://assette/gfx/Overworld.png" id="1_fc1e5"]
 [ext_resource type="PackedScene" uid="uid://befgr0joia1u6" path="res://player.tscn" id="2_yi7ka"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nw27buqidj6q" path="res://wood.tscn" id="4_lo3pv"]
 [ext_resource type="PackedScene" uid="uid://bppfuainamshc" path="res://tree.tscn" id="5_46hsy"]
 [ext_resource type="PackedScene" uid="uid://0k7bq2801jdj" path="res://stone.tscn" id="6_rifg2"]
+[ext_resource type="PackedScene" uid="uid://doofubntima41" path="res://teste_stone.tscn" id="7_smo6x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_he32l"]
 texture = ExtResource("1_fc1e5")
@@ -1207,6 +1208,7 @@ animations = []
 
 [node name="Level" type="Node2D"]
 position = Vector2(0, 2)
+metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -1267,3 +1269,6 @@ position = Vector2(-314, 31)
 
 [node name="stone" parent="." instance=ExtResource("6_rifg2")]
 position = Vector2(-285, -35)
+
+[node name="testeStone" parent="." instance=ExtResource("7_smo6x")]
+position = Vector2(-181, -3)
