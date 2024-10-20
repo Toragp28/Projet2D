@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3y0chdl50743"]
+
+[ext_resource type="Script" path="res://canvas_layer_2.gd" id="1_cn2va"]
+[ext_resource type="PackedScene" uid="uid://jnafisaon3lh" path="res://inventory_gui.tscn" id="1_v0v8q"]
+
+[node name="CanvasLayer2" type="CanvasLayer"]
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, 0)
+script = ExtResource("1_cn2va")
+
+[node name="InventoryGui" parent="." instance=ExtResource("1_v0v8q")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -364.667
+offset_top = -294.333
+offset_right = -204.667
+offset_bottom = -205.333
+grow_horizontal = 2
+grow_vertical = 2

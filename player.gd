@@ -90,3 +90,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		$AnimatedSprite2D.play("idle_right")
 	if $AnimatedSprite2D.animation == "sword_attack_left":
 		$AnimatedSprite2D.play("idle_left")
+
+
+func _on_inventory_gui_focus_entered() -> void:
+	pass # Replace with function body.
