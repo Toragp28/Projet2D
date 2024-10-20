@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://jo4xrn5p88gg"]
 
-[ext_resource type="PackedScene" uid="uid://ov6fvq5vsqt0" path="res://collectable.tscn" id="1_ku2nf"]
+[ext_resource type="PackedScene" uid="uid://j2vf1p3vbtu" path="res://collectable.tscn" id="1_ku2nf"]
 [ext_resource type="Texture2D" uid="uid://se8wy6mx5wtr" path="res://assette/gfx/objects.png" id="2_db0oi"]
 [ext_resource type="Script" path="res://animated_sprite_2d.gd" id="3_4vwbe"]
 
