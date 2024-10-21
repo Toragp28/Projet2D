@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://player.gd" id="1_1pw7a"]
 [ext_resource type="Script" path="res://canvas_layer_2.gd" id="3_a84vp"]
 [ext_resource type="Texture2D" uid="uid://c34diebhi6dyq" path="res://assette/gfx/character.png" id="3_e8i1a"]
-[ext_resource type="PackedScene" uid="uid://jnafisaon3lh" path="res://inventory_gui.tscn" id="3_wybnv"]
+[ext_resource type="PackedScene" uid="uid://dr8uqpwtdeduq" path="res://inventory_gui.tscn" id="3_wybnv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6brjx"]
 atlas = ExtResource("3_e8i1a")
@@ -392,15 +392,16 @@ text = "1
 structured_text_bidi_override_options = [null]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-scale = Vector2(3, 3)
-transform = Transform2D(3, 0, 0, 3, 0, 0)
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
 script = ExtResource("3_a84vp")
 
 [node name="InventoryGui" parent="CanvasLayer2" instance=ExtResource("3_wybnv")]
-offset_left = 224.333
-offset_top = 56.6667
-offset_right = 381.333
-offset_bottom = 149.667
+offset_left = 327.5
+offset_top = 97.0
+offset_right = 484.5
+offset_bottom = 190.0
+scale = Vector2(1.5, 1.5)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="item_hitbox" to="." method="_on_item_hitbox_area_entered"]
