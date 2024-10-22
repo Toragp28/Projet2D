@@ -23,6 +23,7 @@ var input_direction = Vector2(0, 0)
 var dir = Vector2.ZERO
 
 var ressource = 0
+var number_of_gem = 10
 
 
 
@@ -76,6 +77,8 @@ func _physics_process(delta):
 
 	$CanvasLayer/ressource.clear()
 	$CanvasLayer/ressource.add_text(str(ressource))
+	$gem/number.clear()
+	$gem/number.add_text(str(number_of_gem))
 	
 	get_input()
 	animatation()

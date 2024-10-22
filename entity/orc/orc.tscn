@@ -1,7 +1,17 @@
-[gd_scene format=3 uid="uid://dna2e4gywd5c"]
+[gd_scene load_steps=2 format=3 uid="uid://dna2e4gywd5c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yegrd"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}]
 
 [node name="Orc" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yegrd")
+animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
