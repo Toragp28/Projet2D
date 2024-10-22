@@ -4,10 +4,10 @@ var player_entered = false
 var broke = true
 var growing = false
 var is_farming_now = false
-var wood_scene = preload("res://wood.tscn")
-var cooldown_pickup_wood = load("res://wood.tscn")
-var cobblestone_scene = preload("res://cobblestone.tscn")
-var cooldown_pickup_cobble = load("res://cobblestone.tscn")
+var wood_scene = preload("res://item/wood.tscn")
+var cooldown_pickup_wood = load("res://item/wood.tscn")
+var cobblestone_scene = preload("res://item/cobblestone.tscn")
+var cooldown_pickup_cobble = load("res://item/cobblestone.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

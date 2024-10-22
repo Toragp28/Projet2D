@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://j2vf1p3vbtu"]
 
-[ext_resource type="Script" path="res://collectable.gd" id="1_fktn8"]
+[ext_resource type="Script" path="res://item/collectable.gd" id="1_fktn8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gw0cp"]
 radius = 7.07107

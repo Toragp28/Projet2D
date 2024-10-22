@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://chnu0rbm3rsq7"]
 
-[ext_resource type="PackedScene" uid="uid://j2vf1p3vbtu" path="res://collectable.tscn" id="1_kouhd"]
+[ext_resource type="PackedScene" uid="uid://j2vf1p3vbtu" path="res://item/collectable.tscn" id="1_kouhd"]
 [ext_resource type="Texture2D" uid="uid://fiyvrlyyxlge" path="res://assette/item/Item_61.png" id="2_2lp14"]
-[ext_resource type="Script" path="res://cobble.gd" id="3_23mer"]
+[ext_resource type="Script" path="res://item/cobble.gd" id="3_23mer"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_egb20"]
 atlas = ExtResource("2_2lp14")
