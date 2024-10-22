@@ -1,14 +1,5 @@
 extends Node2D
 
-#l'inventaire
-
-@export var itemRes: InventoryItem
-
-func collect(inventory: Inventory):
-	inventory.insert(itemRes)
-	queue_free()
-
-#le reste
 @export var speed: float = 200.0
 var player_on_box = false
 var target_position: Vector2
