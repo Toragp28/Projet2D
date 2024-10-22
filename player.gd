@@ -13,6 +13,8 @@ var state = STATE.Idle
 
 #Variable Paramètre
 @export var speed = 100
+@export var inventory: Inventory
+
 
 #Variable Onready
 

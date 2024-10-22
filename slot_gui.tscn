@@ -1,14 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bug8u76g5xvyj"]
+[gd_scene load_steps=4 format=3 uid="uid://bug8u76g5xvyj"]
 
-[ext_resource type="Texture2D" uid="uid://dqkd0jlcbuwnq" path="res://assette/InventorySlots.png" id="1_54nrv"]
+[ext_resource type="Script" path="res://slot_gui.gd" id="1_uxcvf"]
+[ext_resource type="Texture2D" uid="uid://1nyk5et1kt32" path="res://assette/Sprite-0005.png" id="3_5hftn"]
+[ext_resource type="Texture2D" uid="uid://tao2ukbefgbt" path="res://assette/slotsI.png" id="3_xboh1"]
 
 [node name="Slot" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(24, 24)
 offset_right = 24.0
 offset_bottom = 24.0
+script = ExtResource("1_uxcvf")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-4, -5)
-texture = ExtResource("1_54nrv")
+[node name="background" type="Sprite2D" parent="."]
+scale = Vector2(0.923077, 0.923077)
+texture = ExtResource("3_xboh1")
 centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="item" type="Sprite2D" parent="CenterContainer/Panel"]
+scale = Vector2(0.923077, 0.923077)
+texture = ExtResource("3_5hftn")
