@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dv4pbm8oha5k0"]
 
 [ext_resource type="Texture2D" uid="uid://c4knajg4254re" path="res://assette/gfx/Overworld.png" id="1_fc1e5"]
-[ext_resource type="PackedScene" uid="uid://befgr0joia1u6" path="res://player.tscn" id="2_yi7ka"]
+[ext_resource type="PackedScene" uid="uid://befgr0joia1u6" path="res://entity/player/player.tscn" id="2_yi7ka"]
 [ext_resource type="PackedScene" uid="uid://jo4xrn5p88gg" path="res://item/piece.tscn" id="3_2rglr"]
 [ext_resource type="PackedScene" uid="uid://nw27buqidj6q" path="res://item/wood.tscn" id="4_lo3pv"]
 [ext_resource type="PackedScene" uid="uid://bppfuainamshc" path="res://tree.tscn" id="5_46hsy"]

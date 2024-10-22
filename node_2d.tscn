@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://3u4ot5ka60tj"]
 
 [ext_resource type="Texture2D" uid="uid://c4knajg4254re" path="res://assette/gfx/Overworld.png" id="1_x56d5"]
-[ext_resource type="PackedScene" uid="uid://befgr0joia1u6" path="res://player.tscn" id="2_nrynr"]
+[ext_resource type="PackedScene" uid="uid://befgr0joia1u6" path="res://entity/player/player.tscn" id="2_nrynr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_he32l"]
 texture = ExtResource("1_x56d5")
