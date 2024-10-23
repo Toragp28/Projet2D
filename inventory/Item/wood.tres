@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource("1_ngv6w")
-nam = "lifeport"
+nam = "wood"
 texture = ExtResource("2_rdcc7")

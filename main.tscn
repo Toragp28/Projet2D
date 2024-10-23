@@ -1217,6 +1217,7 @@ animation = &""
 
 [node name="gold" parent="." instance=ExtResource("3_2rglr")]
 position = Vector2(-104, -37)
+itemRes = null
 
 [node name="Wood" parent="." instance=ExtResource("4_lo3pv")]
 position = Vector2(-83, 30)
