@@ -38,7 +38,7 @@ func add_to_inventory() -> void:
 	# Optionnel : mettre à jour les ressources du joueur
 	player_scene2.ressource += 1
 	
-	# Assurez-vous que la mise à jour de l'inventaire se fait depuis le script de l'inventaire
+	# Assurez-vous que la mise à jour de l'i nventaire se fait depuis le script de l'inventaire
 	player_scene2.inventory.updated.emit()  # Émettre le signal depuis l'inventaire du joueur
 
 	# Rendre l'objet non ramassable
