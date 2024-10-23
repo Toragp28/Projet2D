@@ -9,6 +9,14 @@ var cooldown_pickup_wood = load("res://item/wood.tscn")
 var cobblestone_scene = preload("res://item/cobblestone.tscn")
 var cooldown_pickup_cobble = load("res://item/cobblestone.tscn")
 
+var anim_stade_to_number = {
+	"stade 1" : 1,
+	"stade 2" : 2,
+	"stade 3" : 3,
+	"stade 4" : 4,
+	"stade 5" : 5,
+	 }
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -40,7 +48,7 @@ func _process(delta: float) -> void:
 		print("marche")
 		$broke.start()
 		is_farming_now = true
-	if $AnimatedSprite2D.get("stade") != $AnimatedSprite2D.max_stade and growing == false:
+	if anim_stade_to_number[$AnimatedSprite2D.get("animation")] != $AnimatedSprite2D.max_stade and growing == false:
 		growing = true
 		$grow_cooldown.start()
 		

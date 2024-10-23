@@ -1,7 +1,6 @@
 extends Node2D
 
-# Inventory reference for the item
-@export var itemRes: InventoryItem
+
 @export var speed: float = 200.0
 
 # Flags and variables
@@ -34,8 +33,7 @@ func add_to_inventory() -> void:
 	var player_scene2 = player_scene.get_node("Player") 
 	
 	# Ajouter l'élément à l'inventaire du joueur
-	if player_scene2.has_method("add_to_inventory"):
-		player_scene2.add_to_inventory(itemRes)
+
 	
 	# Optionnel : mettre à jour les ressources du joueur
 	player_scene2.ressource += 1
