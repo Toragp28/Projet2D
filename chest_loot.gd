@@ -23,6 +23,12 @@ var color_for_rarity = {
 	"legendary": Color(1, 0.5, 0, 0.4) # Orange avec transparence
 }
 
+var all_item_lootable = {
+	"wood" : 1,
+	"stone" : 0.5,
+	"gold" : 0.1
+}
+
 var rng = RandomNumberGenerator.new()
 
 func get_rarity():
@@ -55,7 +61,8 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("sword_attack") and player_is_area == true and state == STATE.Idle:
 		state = STATE.OPEN
-		print("sword")
+		print(rng.randf_range(10, 220))
+
 
 	
 	##################################"
@@ -66,6 +73,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("open")
 	if state == STATE.OPENNED:
 		$AnimatedSprite2D.play("opened")
+		
 
 
 func _on_zone_open_area_entered(area: Area2D) -> void:
@@ -81,3 +89,4 @@ func _on_zone_open_area_exited(area: Area2D) -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if $AnimatedSprite2D.animation == "open":
 		state = STATE.OPENNED
+		
