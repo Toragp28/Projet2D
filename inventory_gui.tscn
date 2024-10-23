@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://inventory_gui.gd" id="1_bgs2d"]
 [ext_resource type="Texture2D" uid="uid://1nyk5et1kt32" path="res://assette/Sprite-0005.png" id="1_pl0qg"]
-[ext_resource type="PackedScene" path="res://slot_gui.tscn" id="2_cwyba"]
+[ext_resource type="PackedScene" uid="uid://cjbrvprcs6qrc" path="res://slot_gui.tscn" id="2_cwyba"]
 
 [node name="InventoryGui" type="Control"]
 custom_minimum_size = Vector2(128, 80)
@@ -37,47 +37,77 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 5
 
-[node name="Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot2" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot3" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot4" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot5" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot6" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot7" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot8" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot9" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot10" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot11" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot12" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot13" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot13" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot14" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot14" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 
-[node name="Slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+[node name="Slot15" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2

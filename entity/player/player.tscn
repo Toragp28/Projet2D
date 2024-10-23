@@ -1,10 +1,9 @@
-[gd_scene load_steps=50 format=3 uid="uid://befgr0joia1u6"]
+[gd_scene load_steps=49 format=3 uid="uid://befgr0joia1u6"]
 
 [ext_resource type="Script" path="res://entity/player/player.gd" id="1_1pw7a"]
-[ext_resource type="Resource" path="res://inventory/playerInventory.tres" id="2_ts78o"]
 [ext_resource type="Script" path="res://canvas_layer_2.gd" id="3_a84vp"]
 [ext_resource type="Texture2D" uid="uid://c34diebhi6dyq" path="res://assette/gfx/character.png" id="3_e8i1a"]
-[ext_resource type="PackedScene" path="res://inventory_gui.tscn" id="3_wybnv"]
+[ext_resource type="PackedScene" uid="uid://dexylht20hg3p" path="res://inventory_gui.tscn" id="3_wybnv"]
 [ext_resource type="Texture2D" uid="uid://tao2ukbefgbt" path="res://assette/slotsI.png" id="6_12pef"]
 [ext_resource type="Texture2D" uid="uid://efgob2qr4k33" path="res://assette/item/gem.png" id="7_mbdcx"]
 
@@ -358,7 +357,6 @@ height = 18.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_1pw7a")
-inventory = ExtResource("2_ts78o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e1p2v")
