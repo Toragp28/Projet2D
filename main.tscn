@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nw27buqidj6q" path="res://item/wood.tscn" id="4_lo3pv"]
 [ext_resource type="PackedScene" uid="uid://bppfuainamshc" path="res://tree.tscn" id="5_46hsy"]
 [ext_resource type="PackedScene" uid="uid://0k7bq2801jdj" path="res://stone.tscn" id="6_rifg2"]
-[ext_resource type="PackedScene" path="res://chest_loot.tscn" id="7_aeth6"]
+[ext_resource type="PackedScene" uid="uid://61p8cw4nve5x" path="res://chest_loot.tscn" id="7_aeth6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_he32l"]
 texture = ExtResource("1_fc1e5")
