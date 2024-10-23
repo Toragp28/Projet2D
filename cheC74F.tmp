@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://61p8cw4nve5x"]
+[gd_scene load_steps=10 format=3 uid="uid://61p8cw4nve5x"]
 
 [ext_resource type="Script" path="res://chest_loot.gd" id="1_07p5s"]
 [ext_resource type="Texture2D" uid="uid://se8wy6mx5wtr" path="res://assette/gfx/objects.png" id="1_ukudk"]
@@ -52,11 +52,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_5b7u1"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_jraeg"]
-gradient = SubResource("Gradient_5b7u1")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ps4s1"]
 size = Vector2(13, 14)
 
@@ -72,11 +67,7 @@ shape = SubResource("CircleShape2D_od3qj")
 sprite_frames = SubResource("SpriteFrames_qbgox")
 animation = &"opened"
 
-[node name="Aura" type="PointLight2D" parent="."]
-position = Vector2(0.5, -1)
-scale = Vector2(0.203125, 0.21875)
-energy = 4.14
-texture = SubResource("GradientTexture2D_jraeg")
+[node name="Aura" type="Sprite2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
