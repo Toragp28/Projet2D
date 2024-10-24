@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://chnu0rbm3rsq7"]
+[gd_scene load_steps=5 format=3 uid="uid://chnu0rbm3rsq7"]
 
 [ext_resource type="PackedScene" uid="uid://j2vf1p3vbtu" path="res://item/collectable.tscn" id="1_kouhd"]
 [ext_resource type="Texture2D" uid="uid://fiyvrlyyxlge" path="res://assette/item/Item_61.png" id="2_2lp14"]
-[ext_resource type="Script" path="res://item/cobble.gd" id="3_23mer"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_egb20"]
 atlas = ExtResource("2_2lp14")
@@ -25,7 +24,6 @@ animations = [{
 position = Vector2(0.5, 0)
 scale = Vector2(0.8125, 0.75)
 sprite_frames = SubResource("SpriteFrames_7o7t7")
-script = ExtResource("3_23mer")
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(0, 1)

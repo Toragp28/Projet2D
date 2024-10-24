@@ -1,13 +1,13 @@
 extends Node2D
 
 # Inventory reference for the item
-@export var itemRes: InventoryItem
 @export var speed: float = 200.0
 
 # Flags and variables
 var player_on_box = false
 var target_position: Vector2
 var pickable = true
+var cooldown_time: float = 1.0  # Time before the player can pick up another item
 
 # Called when the node is added to the scene
 func _ready() -> void:
@@ -26,37 +26,21 @@ func _process(delta: float) -> void:
 			if pickable == true:
 				global_position = target_position
 				add_to_inventory()
-				# Désactiver le ramassage plutôt que de détruire l'objet
-				make_non_pickable()
+				queue_free()
 
+# Adding the item to the player's inventory
 func add_to_inventory() -> void:
 	var player_scene = get_tree().get_root().get_node("Level")
 	var player_scene2 = player_scene.get_node("Player") 
 	
-	# Ajouter l'élément à l'inventaire du joueur
-	if player_scene2.has_method("add_to_inventory"):
-		player_scene2.add_to_inventory(itemRes)
-	
-	# Optionnel : mettre à jour les ressources du joueur
+	# Optionally update the player's resources
 	player_scene2.ressource += 1
-	
-	# Assurez-vous que la mise à jour de l'inventaire se fait depuis le script de l'inventaire
-	player_scene2.inventory.updated.emit()  # Émettre le signal depuis l'inventaire du joueur
-
-	# Rendre l'objet non ramassable
-	make_non_pickable()
-
-
-func make_non_pickable() -> void:
-	# Désactiver la collision pour cet objet
-	$CollisionShape2D.disabled = true  # Assurez-vous que ce nœud existe dans la hiérarchie
-	
-	# Optionnel : cacher l'apparence visuelle
-	$Sprite2D.visible = false  # Assurez-vous que le nœud Sprite2D existe aussi
-
-	# L'objet n'est plus ramassable
 	pickable = false
 
+
+# Reset pickable status after cooldown
+func _on_cooldown_pickup_timeout() -> void:
+	pickable = true
 
 # Handling area collision with the box
 func _on_area_2d_area_entered(area: Area2D) -> void:
