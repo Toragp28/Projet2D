@@ -37,77 +37,62 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 5
 
-[node name="Slot" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot2" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot3" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot4" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot5" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot6" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot7" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot8" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot9" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot10" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot11" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot12" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot13" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot13" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot14" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot14" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null
 
-[node name="Slot15" type="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
-self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(24, 24)
+[node name="Slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("2_cwyba")]
 layout_mode = 2
+script = null

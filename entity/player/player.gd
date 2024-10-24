@@ -69,6 +69,8 @@ func animatation():
 		if dir == Vector2(-1, 0):
 			$AnimatedSprite2D.play("sword_attack_left")
 			
+	
+			
 
 		
 	
