@@ -1,6 +1,10 @@
 extends Node2D
 
+<<<<<<< HEAD
 # Inventory reference for the item
+=======
+
+>>>>>>> a1e87544e6eb9aec968ca3ff8be6affc3e7bffc2
 @export var speed: float = 200.0
 
 # Flags and variables
@@ -33,8 +37,32 @@ func add_to_inventory() -> void:
 	var player_scene = get_tree().get_root().get_node("Level")
 	var player_scene2 = player_scene.get_node("Player") 
 	
+<<<<<<< HEAD
 	# Optionally update the player's resources
 	player_scene2.ressource += 1
+=======
+	# Ajouter l'élément à l'inventaire du joueur
+
+	
+	# Optionnel : mettre à jour les ressources du joueur
+	player_scene2.ressource += 1
+	
+	# Assurez-vous que la mise à jour de l'i nventaire se fait depuis le script de l'inventaire
+	player_scene2.inventory.updated.emit()  # Émettre le signal depuis l'inventaire du joueur
+
+	# Rendre l'objet non ramassable
+	make_non_pickable()
+
+
+func make_non_pickable() -> void:
+	# Désactiver la collision pour cet objet
+	$CollisionShape2D.disabled = true  # Assurez-vous que ce nœud existe dans la hiérarchie
+	
+	# Optionnel : cacher l'apparence visuelle
+	$Sprite2D.visible = false  # Assurez-vous que le nœud Sprite2D existe aussi
+
+	# L'objet n'est plus ramassable
+>>>>>>> a1e87544e6eb9aec968ca3ff8be6affc3e7bffc2
 	pickable = false
 
 

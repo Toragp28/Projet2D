@@ -1,6 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://nw27buqidj6q"]
 
 [ext_resource type="PackedScene" uid="uid://j2vf1p3vbtu" path="res://item/collectable.tscn" id="1_n7cn6"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Resource" path="res://inventory/Item/wood.tres" id="2_civy0"]
+>>>>>>> a1e87544e6eb9aec968ca3ff8be6affc3e7bffc2
 [ext_resource type="Texture2D" uid="uid://5u4j6dfng25g" path="res://assette/item/Item_54.png" id="2_s5d1g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h4fgx"]

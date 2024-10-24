@@ -10,14 +10,15 @@ func _ready() -> void:
 		stade = 3
 		max_stade = 3
 		$".".play("stade 3")
-	else:
+	elif $".".get_parent().get_node("Area2D").has_method("is_tree"):
 		stade = 5
 		max_stade = 5
 		$".".play("stade 5")
 	
 func _physics_process(delta: float) -> void:
-
-	$".".play("stade " + str(stade))
+	if $".".get_parent().get_node("Area2D").has_method("is_stone") or $".".get_parent().get_node("Area2D").has_method("is_tree") :
+		
+		$".".play("stade " + str(stade))
 
 	
 

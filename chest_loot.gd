@@ -23,7 +23,31 @@ var color_for_rarity = {
 	"legendary": Color(1, 0.5, 0, 0.4) # Orange avec transparence
 }
 
+
+
+var all_item_lootable = {			#Plus le poids est haut moins l'item a de chance de drop
+	"wood" : 10,
+	"stone" : 40,
+	"gold" : 100
+}
+
 var rng = RandomNumberGenerator.new()
+
+func get_loot_by_weight():
+	var total_weight = 0.0
+	var cumulative_weight = {}
+	
+
+	for item in all_item_lootable:
+		total_weight += 1.0 / float(all_item_lootable[item])
+		cumulative_weight[item] = total_weight
+	
+	var loot_roll = rng.randf_range(0, total_weight) 
+	
+	for item in cumulative_weight:
+		if loot_roll <= cumulative_weight[item]:
+			return item
+
 
 func get_rarity():
 	rng.randomize()
@@ -40,14 +64,40 @@ func get_rarity():
 			return n
 		item -= rarities_drop[n]
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var rarity = get_rarity()
-	# Configurez la couleur de la lumière 2D
 	$Aura.color = color_for_rarity[rarity]
-	$Aura.energy = 4.14 # Ajustez l'énergie de la lumière
-	print(rarity)
-
+	$Aura.energy = 4.14
+	
+	var rarity_loot = randf_range(10, 100)
+	var rarity_multiplier = 1.0
+	
+	if rarity == "common":
+		rarity_multiplier = 1.0
+	elif rarity == "rare":
+		rarity_multiplier = 1.5
+	elif rarity == "epic":
+		rarity_multiplier = 2.0
+	elif rarity == "legendary":
+		rarity_multiplier = 4.0
+	
+	var true_rarity_loot = rarity_loot * rarity_multiplier
+	print(true_rarity_loot)
+	
+	var all_loot = []
+	
+	# On limite le nombre de tentatives de loot pour éviter trop de doublons rares
+	for i in range(3): # Modifier cette valeur selon combien d'items max tu veux looter
+		var item_loot = get_loot_by_weight()
+		if item_loot and float(all_item_lootable[item_loot]) <= true_rarity_loot:
+			# Vérifie si l'item n'est pas déjà présent trop de fois
+			var max_occurrences = 1 if item_loot == "gold" else 2
+			if all_loot.count(item_loot) < max_occurrences:
+				all_loot.append(item_loot)
+	if rarity == "legendary":
+		all_loot.append("gold")
+	
+	print(all_loot)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -55,7 +105,10 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("sword_attack") and player_is_area == true and state == STATE.Idle:
 		state = STATE.OPEN
-		print("sword")
+		
+		
+		
+
 
 	
 	##################################"
@@ -66,6 +119,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("open")
 	if state == STATE.OPENNED:
 		$AnimatedSprite2D.play("opened")
+		
 
 
 func _on_zone_open_area_entered(area: Area2D) -> void:
@@ -81,3 +135,4 @@ func _on_zone_open_area_exited(area: Area2D) -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if $AnimatedSprite2D.animation == "open":
 		state = STATE.OPENNED
+		
